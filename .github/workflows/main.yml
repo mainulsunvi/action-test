@@ -1,0 +1,23 @@
+name: Node Test Learning
+on:
+    push:
+        branches:
+            - main
+jobs:
+    Execute-Node-File:
+        runs-on: ubuntu-lates
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v1
+
+            - name: Node Js
+              uses: actions/setup-node@v3
+              with:
+                node-version: latest
+
+            - name: Node Version Checker
+              run: node -v
+
+            - name: File Run
+              run: node index.js
