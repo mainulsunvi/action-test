@@ -15,10 +15,10 @@ jobs:
               with:
                 node-version: latest
             
-            - name : Java JDK
+            - name : Python
               uses : actions/setup-python@v4
               with:
-                  python-version: latest
+                  python-version: '3.11'
 
             - name: Node Version Checker
               run: node -v
